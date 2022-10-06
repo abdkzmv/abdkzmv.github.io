@@ -72,3 +72,10 @@ footer {
     margin-right: 10%;
     margin-top: 25px;
 }
+
+/* Responsive Styling */
+@media (max-width: 460px) {
+    .navbar {
+        font-size: 12px;
+    }
+}
