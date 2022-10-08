@@ -127,7 +127,7 @@ main {
 }
 
 /* Responsive Styling */
-@media (max-width: 800px) {
+@media (max-width: 500px) {
     .navbar {
         font-size: 12px;
     }
