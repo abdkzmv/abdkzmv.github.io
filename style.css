@@ -104,8 +104,10 @@ main {
 }
 
 .submission_form>form>ul>li>input[type="submit"] {
-    width: 80px;
+    width: 180px;
     height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-style: solid;
     border-radius: 5px;
 }
