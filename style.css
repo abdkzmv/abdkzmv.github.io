@@ -39,6 +39,11 @@
     border-bottom-color: #ffffff;
 }
 
+.navbar {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* Main Part Styling */
 main {
     margin-bottom: 8%;
@@ -59,12 +64,12 @@ main {
 
 #header_1 {
     font-size: 60px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: cursive;
 }
 
 #header_2 {
     font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Courier New', Courier, monospace;
 }
 
 /* Container Styling */
