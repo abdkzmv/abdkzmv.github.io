@@ -135,9 +135,9 @@ main {
         text-align: left;
     }
     .submission_form>form>ul>li>input {
-        width: 280px;
+        width: 85%;
     }
     .submission_form>form>ul>li>textarea {
-        width: 280px;
+        width: 85%;
     }
 }
