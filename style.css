@@ -41,13 +41,20 @@
 
 /* Main Part Styling */
 main {
-    margin-top: 8%;
     margin-bottom: 8%;
     margin-left: 10px;
     margin-right: 10px;
     color: white;
     text-align: center;
     height: 95%;
+}
+
+#home_main {
+    margin-top: 10%;
+}
+
+#contact_main {
+    margin-top: 2%;
 }
 
 #header_1 {
@@ -58,6 +65,62 @@ main {
 #header_2 {
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Container Styling */
+.container {
+    margin: 0 auto;
+}
+
+
+/* Submission Form Styling */
+.submission_form>form>ul {
+    list-style-type: none;
+}
+
+.submission_form>form>ul>li {
+    padding-top: 25px;
+}
+
+.submission_form>form>ul>li>p {
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.submission_form>form>ul>li>input {
+    width: 60%;
+    color: #ffffff;
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+.submission_form>form>ul>li>input[type="text"] {
+    height: 25px;
+}
+
+.submission_form>form>ul>li>input[type="email"] {
+    height: 25px;
+}
+
+.submission_form>form>ul>li>input[type="submit"] {
+    height: 30px;
+}
+
+.submission_form>form>ul>li>input[type="submit"]:hover {
+    height: 30px;
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}
+
+.submission_form>form>ul>li>textarea {
+    width: 60%;
+    height: 200px;
+    resize: none;
+    color: #ffffff;
+    border: 1px solid grey;
+    padding: 8px;
 }
 
 /* Footer Bar Styling */
