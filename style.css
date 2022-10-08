@@ -41,12 +41,12 @@
 
 .navbar {
     font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif
 }
 
 /* Main Part Styling */
 main {
-    margin-bottom: 8%;
+    margin-bottom: 4%;
     margin-left: 10px;
     margin-right: 10px;
     color: white;
@@ -64,12 +64,12 @@ main {
 
 #header_1 {
     font-size: 60px;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
 }
 
 #header_2 {
     font-size: 30px;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Times New Roman', Times, serif';
 }
 
 /* Container Styling */
@@ -94,7 +94,7 @@ main {
 }
 
 .submission_form>form>ul>li>input {
-    width: 60%;
+    width: 300px;
     color: #ffffff;
     border: 1px solid grey;
     padding: 8px;
@@ -120,7 +120,7 @@ main {
 }
 
 .submission_form>form>ul>li>textarea {
-    width: 60%;
+    width: 300px;
     height: 200px;
     resize: none;
     color: #ffffff;
