@@ -3,6 +3,7 @@
     background-color: #000000;
     margin-left: 0;
     margin-top: 0;
+    margin-right: 0;
 }
 
 /* Navigation Bar Styling */
@@ -15,6 +16,8 @@
     border-bottom-style: solid;
     border-bottom-width: 1.5px;
     border-bottom-color: #ffffff;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif
 }
 
 .navbar>ul {
@@ -38,24 +41,15 @@
     padding-bottom: 1.5px;
     border-bottom-color: #ffffff;
 }
-
-.navbar {
-    font-size: 15px;
-    font-family: 'Times New Roman', Times, serif
-}
-
 /* Main Part Styling */
 main {
-    margin-bottom: 4%;
-    margin-left: 10px;
-    margin-right: 10px;
     color: white;
-    text-align: center;
     height: 95%;
 }
 
 #home_main {
     margin-top: 10%;
+    text-align: center;
 }
 
 #contact_main {
@@ -72,15 +66,17 @@ main {
     font-family: 'Times New Roman', Times, serif';
 }
 
+
 /* Container Styling */
 .container {
-    margin: 0 auto;
+    text-align: center;
 }
-
 
 /* Submission Form Styling */
 .submission_form>form>ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .submission_form>form>ul>li {
@@ -90,11 +86,10 @@ main {
 .submission_form>form>ul>li>p {
     font-size: 30px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
 }
 
 .submission_form>form>ul>li>input {
-    width: 300px;
+    width: 350px;
     color: #ffffff;
     border: 1px solid grey;
     padding: 8px;
@@ -109,7 +104,10 @@ main {
 }
 
 .submission_form>form>ul>li>input[type="submit"] {
+    width: 80px;
     height: 30px;
+    border-style: solid;
+    border-radius: 5px;
 }
 
 .submission_form>form>ul>li>input[type="submit"]:hover {
@@ -120,7 +118,7 @@ main {
 }
 
 .submission_form>form>ul>li>textarea {
-    width: 300px;
+    width: 350px;
     height: 200px;
     resize: none;
     color: #ffffff;
@@ -128,22 +126,18 @@ main {
     padding: 8px;
 }
 
-/* Footer Bar Styling */
-footer {
-    color: white;
-    border-top: 1px solid;
-    text-align: center;
-    width: 80%;
-    height: 30px;
-    padding-top: 15px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 25px;
-}
-
 /* Responsive Styling */
-@media (max-width: 460px) {
+@media (max-width: 800px) {
     .navbar {
         font-size: 12px;
+    }
+    .container {
+        text-align: left;
+    }
+    .submission_form>form>ul>li>input {
+        width: 280px;
+    }
+    .submission_form>form>ul>li>textarea {
+        width: 280px;
     }
 }
