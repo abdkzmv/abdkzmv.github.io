@@ -268,15 +268,13 @@ hr {
     }
     
     #gallery {
-        margin-left: 8%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 
     #about-img {
         text-align: center;
-    }
-
-    .gallery {
-        text-align: left;
     }
 }
 
