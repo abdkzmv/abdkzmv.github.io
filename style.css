@@ -131,7 +131,9 @@ main {
 /* Responsive Styling */
 @media (max-width: 500px) {
     .navbar {
-        font-size: 12px;
+        font-size: 12.5px;
+        height: 50px;
+        padding-top: 35px;
     }
     .container {
         text-align: left;
