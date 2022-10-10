@@ -66,6 +66,60 @@ main {
     font-family: 'Times New Roman', Times, serif';
 }
 
+.about>ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;   
+}
+
+.about>ul>li {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    text-align: justify;
+}
+
+.about>ul>li>ul>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+.about>ul>li>ul>li {
+    padding-top: 2%;
+}
+
+.about>ul>li>img {
+    border-radius: 50%;
+    border-style: solid;
+    transition: 0.5s;
+}
+
+.about>ul>li>img:hover {
+    transform: scale(1.25);
+    transform: 0.5s;
+}
+
+.about>ul>li>ul>li>a:hover {
+    text-decoration: underline;
+}
+
+#education {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#experience {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 50px;
+}
+
+#gallery {
+    margin-left: 15%;
+    margin-right: 15%;
+}
 
 /* Container Styling */
 .container {
@@ -128,6 +182,9 @@ main {
     padding: 8px;
 }
 
+#quick-nav {
+    list-style-type: none;
+}
 /* Responsive Styling */
 @media (max-width: 500px) {
     .navbar {
@@ -154,6 +211,23 @@ main {
         font-size: 10px;
         font-family: 'Times New Roman', Times, serif';
     }
+    #education {
+        margin-left: 8%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    #experience {
+        margin-left: 8%;
+        margin-bottom: 50px;
+    }
+    
+    #gallery {
+        margin-left: 8%;
+    }
+    #about-img {
+        text-align: center;
+    }
 }
 @media (max-width: 730px) {
     #header_1 {
@@ -164,4 +238,10 @@ main {
         font-size: 15px;
         font-family: 'Times New Roman', Times, serif';
     }    
+    .about>ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: -5%;
+        margin-right: 5%;
+    }
 }
