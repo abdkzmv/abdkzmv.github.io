@@ -103,24 +103,68 @@ main {
     text-decoration: underline;
 }
 
-#education {
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+
+.education>ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
 }
 
-#experience {
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 50px;
+.education>ul>li {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-#gallery {
-    margin-left: 15%;
-    margin-right: 15%;
+.experience {
+    padding-bottom: 5%;
 }
 
+.experience>ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    margin-top: 3%;
+}
+
+.experience>ul>li {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+hr {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#experience-pic {
+    border-radius: 20%;
+}
+
+#education-pic {
+    border-radius: 20%;
+}
+
+.gallery {
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+.gallery>ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.gallery>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery>ul>li>img {
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
 /* Container Styling */
 .container {
     text-align: center;
@@ -211,13 +255,14 @@ main {
         font-size: 10px;
         font-family: 'Times New Roman', Times, serif';
     }
-    #education {
+
+    .education {
         margin-left: 8%;
         margin-top: 50px;
         margin-bottom: 50px;
     }
     
-    #experience {
+    .experience {
         margin-left: 8%;
         margin-bottom: 50px;
     }
@@ -225,10 +270,16 @@ main {
     #gallery {
         margin-left: 8%;
     }
+
     #about-img {
         text-align: center;
     }
+
+    .gallery {
+        text-align: left;
+    }
 }
+
 @media (max-width: 730px) {
     #header_1 {
         font-size: 30px;
@@ -243,5 +294,26 @@ main {
         flex-direction: column;
         margin-left: -5%;
         margin-right: 5%;
+    }
+    .education>ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        margin-left: -15%;
+    }
+    
+    .experience>ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        margin-left: -15%;
+    }
+
+    #experience-pic {
+        display: none;
+    }
+
+    #education-pic {
+        display: none;
     }
 }
