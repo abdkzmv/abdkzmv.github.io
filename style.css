@@ -111,8 +111,7 @@ main {
 }
 
 .education>ul>li {
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-left: 12%;
 }
 
 .experience {
@@ -127,14 +126,21 @@ main {
 }
 
 .experience>ul>li {
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-left: 12%;
 }
 
 hr {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+#experience-text {
+    width: 25%;
+}
+
+#education-text {
+    width: 25%;
 }
 
 #experience-pic {
