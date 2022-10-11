@@ -313,6 +313,14 @@ hr {
         margin-left: -15%;
     }
 
+    #experience-text {
+        width: 75%;
+    }
+
+    #education-text {
+        width: 75%;
+    }
+
     #experience-pic {
         display: none;
     }
