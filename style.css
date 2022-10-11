@@ -84,8 +84,8 @@ main {
     text-decoration: none;
 }
 
-.about>ul>li>ul>li {
-    padding-top: 2%;
+.about>ul>li>p {
+    padding-top: 2.5%;
 }
 
 .about>ul>li>img {
@@ -101,6 +101,10 @@ main {
 
 .about>ul>li>ul>li>a:hover {
     text-decoration: underline;
+}
+
+.education {
+    padding-top: 2.5%;
 }
 
 
@@ -327,5 +331,14 @@ hr {
 
     #education-pic {
         display: none;
+    }
+
+    .education {
+        padding-top: 1%;
+    }
+
+    .about>ul>li>img:hover {
+        transform: scale(1.1);
+        transform: 0.5s;
     }
 }
