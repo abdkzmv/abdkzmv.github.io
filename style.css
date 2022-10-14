@@ -4,6 +4,7 @@
     margin-left: 0;
     margin-top: 0;
     margin-right: 0;
+    font-family: Nunito;
 }
 
 /* Navigation Bar Styling */
@@ -17,7 +18,6 @@
     border-bottom-width: 1.5px;
     border-bottom-color: #ffffff;
     font-size: 15px;
-    font-family: 'Times New Roman', Times, serif
 }
 
 .navbar>ul {
@@ -58,12 +58,10 @@ main {
 
 #header_1 {
     font-size: 50px;
-    font-family:'Times New Roman', Times, serif;
 }
 
 #header_2 {
     font-size: 25px;
-    font-family: 'Times New Roman', Times, serif';
 }
 
 .about>ul {
@@ -103,78 +101,24 @@ main {
     text-decoration: underline;
 }
 
-.education {
-    padding-top: 2.5%;
-}
-
-
-.education>ul {
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-}
-
-.education>ul>li {
-    margin-left: 12%;
-}
-
-.experience {
-    padding-bottom: 5%;
-}
-
-.experience>ul {
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    margin-top: 3%;
-}
-
-.experience>ul>li {
-    margin-left: 12%;
-}
-
-hr {
+.education>table {
+    margin: 0 auto;
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
-#experience-text {
-    width: 25%;
-}
-
-#education-text {
-    width: 25%;
+.experience>table {
+    margin: 0 auto;
+    width: 90%;
 }
 
 #experience-pic {
-    border-radius: 20%;
+    text-align: right;
 }
 
 #education-pic {
-    border-radius: 20%;
+    text-align: right;
 }
 
-.gallery {
-    text-align: center;
-    margin-top: 2.5%;
-}
-
-.gallery>ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-}
-
-.gallery>ul {
-    display: flex;
-    flex-direction: column;
-}
-
-.gallery>ul>li>img {
-    padding-right: 5%;
-    padding-bottom: 5%;
-}
 /* Container Styling */
 .container {
     text-align: center;
@@ -193,7 +137,6 @@ hr {
 
 .submission_form>form>ul>li>p {
     font-size: 30px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .submission_form>form>ul>li>input {
@@ -246,6 +189,18 @@ hr {
         height: 50px;
         padding-top: 35px;
     }
+    
+    #header_1 {
+        font-size: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #header_2 {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 800px) {
     .container {
         text-align: left;
     }
@@ -255,47 +210,16 @@ hr {
     .submission_form>form>ul>li>textarea {
         width: 85%;
     }
-    #header_1 {
-        font-size: 20px;
-        font-family:'Times New Roman', Times, serif;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #header_2 {
-        font-size: 10px;
-        font-family: 'Times New Roman', Times, serif';
-    }
-
-    .education {
-        margin-left: 8%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-    
-    .experience {
-        margin-left: 8%;
-        margin-bottom: 50px;
-    }
-    
-    #gallery {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
 
     #about-img {
         text-align: center;
     }
-}
 
-@media (max-width: 730px) {
     #header_1 {
         font-size: 30px;
-        font-family:'Times New Roman', Times, serif;
     }
     #header_2 {
         font-size: 15px;
-        font-family: 'Times New Roman', Times, serif';
     }    
     .about>ul {
         display: flex;
