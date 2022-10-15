@@ -25,6 +25,7 @@
     color: #ffffff;
     border: 1px solid grey;
     padding: 8px;
+    border-radius: 10px;
 }
 
 .submission_form>form>ul>li>input[type="text"] {
@@ -58,16 +59,25 @@
     color: #ffffff;
     border: 1px solid grey;
     padding: 8px;
+    border-radius: 10px;
 }
 
 @media (max-width: 800px) {
-    .submission_form>form>ul>li>input {
-        width: 85%;
-    }
-    .submission_form>form>ul>li>textarea {
-        width: 85%;
-    }
     .container {
         text-align: left;
+    }
+    .submission_form>form>ul>li>input {
+        width: 80%;
+    }
+    .submission_form>form>ul>li>textarea {
+        width: 80%;
+    }
+    .submission_form>form>ul>li>input[type="submit"] {
+        width: 60%;
+        height: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-style: solid;
+        border-radius: 5px;
     }
 }
