@@ -67,10 +67,6 @@
     .submission_form>form>ul>li>textarea {
         width: 85%;
     }
-}
-
-
-@media (max-width: 800px) {
     .container {
         text-align: left;
     }

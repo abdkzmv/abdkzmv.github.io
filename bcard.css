@@ -136,3 +136,20 @@
     letter-spacing: 0.5px;
     transition: 0.7s;
 }
+
+@media (max-width: 400px) {
+    .area {
+        width: 300px;
+    }
+    .card {
+        width: 300px;
+    }
+    .card-head>img {
+        width: 300px;
+        height: 200px;
+    }
+    .card-footer {
+        margin-top: 0;
+        width: 300px;
+    }
+}
