@@ -1,9 +1,8 @@
 .about>ul {
     list-style-type: none;
     display: flex;
-    flex-direction: row;   
+    flex-direction: row; 
 }
-
 .about>ul>li {
     margin-left: 5%;
     margin-right: 5%;
