@@ -1,13 +1,10 @@
 const api_key = "5a0133ec641ca35a97a17bbaf76ae70f";
-
 function removeInitial() {
     let element = document.getElementById("choice-text");
     element.remove();
 
     element = document.getElementById("choice-f");
     element.remove();
-
-    element = document.createElement("ul");
 }
 function f1() {
     removeInitial();
@@ -22,6 +19,7 @@ function f1() {
     let inp1 = document.createElement("input");
     inp1.setAttribute("type","text");
     inp1.setAttribute("id","city-name");
+    inp1.setAttribute("placeholder","City Name");
     li1.appendChild(inp1);
     element.appendChild(li1);
     container.append(element);
@@ -50,6 +48,7 @@ function f2() {
     let inp2 = document.createElement("input");
     inp2.setAttribute("type","text");
     inp2.setAttribute("id","lat");
+    inp2.setAttribute("placeholder","Latitude");
     li2.appendChild(inp2);
     ul2.appendChild(li2);
     container.appendChild(ul2);
@@ -58,6 +57,7 @@ function f2() {
     inp2 = document.createElement("input");
     inp2.setAttribute("type","text");
     inp2.setAttribute("id","lon");
+    inp2.setAttribute("placeholder","Longitude");
     li2.appendChild(inp2);
     ul2.appendChild(li2);
     container.appendChild(ul2);
@@ -111,11 +111,24 @@ function getGeoLocation(position) {
 }
 
 function getData(url) {
+    let x;
     fetch(url)
     .then((data) => {
       return data.json();
     })
     .then((data) => {
+        let container = document.getElementById("container");
+
+        
+
+        if(data.cod != "200") {
+            alert(data.message);
+            return;
+        }
+
+        
+
+        /***  SAVING DATA IN VARIABLES ***/
         let cityName = data.name;
         let countryCode = data.sys.country;
         let weatherCondition = data.weather[0].main;
@@ -132,8 +145,48 @@ function getData(url) {
         let date = new Date(dt * 1000);
         let responseTime = date.toLocaleTimeString("en-US");
         let responseDate = date.toLocaleDateString("en-US");
+        return getCountryName(cityName,countryCode,weatherCondition,weatherDescription,
+            temp,tempMin,tempMax,pressure,humidity,realFeel,
+            windSpeed,windDirection,responseTime,responseDate);
     })
     .catch(function(error) {
         console.log(error);
     });
+}
+
+function getCountryName(cityName,countryCode,weatherCondition,weatherDescription,
+    temp,tempMin,tempMax,pressure,humidity,realFeel,
+    windSpeed,windDirection,responseTime,responseDate) {
+        let url = "https://restcountries.com/v3.1/alpha/" + countryCode;
+        fetch(url)
+        .then((data) => {
+            return data.json();
+        })
+        .then((data) => {
+           let countryName = data[0].name.official; 
+           return display(cityName,countryName,weatherCondition,weatherDescription,
+            temp,tempMin,tempMax,pressure,humidity,realFeel,
+            windSpeed,windDirection,responseTime,responseDate);
+        });
+}
+
+function display(cityName,countryName,weatherCondition,weatherDescription,
+    temp,tempMin,tempMax,pressure,humidity,realFeel,
+    windSpeed,windDirection,responseTime,responseDate) {
+        console.log(cityName);
+        console.log(countryName);
+        console.log(weatherCondition);
+        console.log(weatherDescription);
+        console.log(temp);
+        console.log(tempMin);
+        console.log(tempMax);
+        console.log(pressure);
+        console.log(humidity);
+        console.log(realFeel);
+        console.log(windSpeed);
+        console.log(windDirection);
+        console.log(responseTime);
+        console.log(responseDate);
+        
+        
 }

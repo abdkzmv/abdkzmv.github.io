@@ -5,9 +5,6 @@
 main {
     margin-top: 2%;
 }
-.container {
-    text-align: center;
-}
 .container>p {
     font-size: large;
 }
@@ -33,6 +30,20 @@ main {
     height: 100px;
     font-size: medium;
     border-radius: 10px;
+}
+
+input {
+    height: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#result {
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    background-color: white;
+    color: black;
 }
 
 @media (max-width: 700px) {
