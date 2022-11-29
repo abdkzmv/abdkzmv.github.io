@@ -25,6 +25,16 @@ main {
     border-radius: 10px;
 }
 
+.container>ul>li>button:hover {
+    color: black;
+    background-color: white;
+    transition: 0.2s;
+    width: 200px;
+    height: 100px;
+    font-size: medium;
+    border-radius: 10px;
+}
+
 @media (max-width: 700px) {
     .container>ul {
         flex-direction: column;

@@ -1,3 +1,5 @@
+const api_key = "5a0133ec641ca35a97a17bbaf76ae70f";
+
 function removeInitial() {
     let element = document.getElementById("choice-text");
     element.remove();
@@ -74,23 +76,64 @@ function f3() {
     removeInitial();
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(getGeoLocation);
-      } else {
-        alert("Check access settings");
+      }
+    else {
+        alert("Check access settings. Your browser doesn't support Geolocation API.");
     }
 }
 
 function getDataUsingCity() {
     let cityName = document.getElementById("city-name").value;
+    
+    let url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + api_key + "&units=metric";
+
+    getData(url);
 }
 
 function getDataUsingMeasures() {
     let latitude = document.getElementById("lat").value;
     let longitude = document.getElementById("lon").value;
     console.log(latitude+" "+longitude);
+
+    let url = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + api_key + "&units=metric";
+
+    getData(url);
 }
 
 function getGeoLocation(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     console.log(latitude+" "+longitude);
-  }
+
+    let url = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + api_key + "&units=metric";
+
+    getData(url);
+}
+
+function getData(url) {
+    fetch(url)
+    .then((data) => {
+      return data.json();
+    })
+    .then((data) => {
+        let cityName = data.name;
+        let countryCode = data.sys.country;
+        let weatherCondition = data.weather[0].main;
+        let weatherDescription = data.weather[0].description;
+        let temp = data.main.temp;
+        let tempMin = data.main.temp_min;
+        let tempMax = data.main.temp_max;
+        let pressure = data.main.pressure;
+        let humidity = data.main.humidity;
+        let realFeel = data.main.feels_like;
+        let windSpeed = data.wind.speed;
+        let windDirection = data.wind.deg;
+        let dt = data.dt;
+        let date = new Date(dt * 1000);
+        let responseTime = date.toLocaleTimeString("en-US");
+        let responseDate = date.toLocaleDateString("en-US");
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+}
